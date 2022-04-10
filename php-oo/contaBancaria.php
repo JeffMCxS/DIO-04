@@ -1,17 +1,43 @@
 <?php
 
+declare(stric_type=1);
+
 namespace name;
 
 class ContaBancaria
 {
+    /**
+     *  @var string
+     */
     private $banco;
+
+    /**
+     *  @var string
+     */
     private $nomeTitular;
+
+    /**
+     *  @var string
+     */
     private $numeroAgencia;
+
+    /**
+     *  @var string
+     */
     private $numeroConta;
+
+    /**
+     *  @var float
+     */
     private $saldo = 1000;
 
-    public function __construct($banco, $nomeTitular, $numeroAgencia, $numeroConta, $saldo)
-    {
+    public function __construct(
+        string $banco,
+        string $nomeTitular,
+        string $numeroAgencia,
+        string $numeroConta,
+        float $saldo
+    ) {
         $this->banco = $banco;
         $this->nomeTitular = $nomeTitular;
         $this->numeroAgencia = $numeroAgencia;

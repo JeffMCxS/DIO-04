@@ -1,0 +1,23 @@
+<?php
+
+echo date('d/m/y') . PHP_EOL;
+echo date('d/m/Y') . PHP_EOL;
+
+//
+
+$data = new DateTime();
+var_dump($data);
+
+//
+
+$data = new DateTime();
+echo $data->format('d-m-Y H:i:s') . PHP_EOL;
+
+//
+
+$data = new DateTime();
+$intervalo = new DateInterval('PT5M'); // adiciona um período de  minutos
+$data->add($intervalo);
+//$data->sub($intervalo);
+
+var_dump($data);
