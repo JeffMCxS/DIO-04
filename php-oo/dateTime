@@ -21,3 +21,6 @@ $data->add($intervalo);
 //$data->sub($intervalo);
 
 var_dump($data);
+
+$usuario['codigo'];
+$usuario = ['codigo' => 1];
