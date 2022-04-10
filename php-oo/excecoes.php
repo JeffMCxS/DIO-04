@@ -9,7 +9,7 @@ echo "\n ... executando ...\n"; //Essa linha não será executada pois o Excepti
 function validarUsuario(array $usuario)
 {
     if (empty($usuario['codigo']) || empty($usuario['nome']) || empty($usuario['idade'])) {
-        //return false;
+        throw new Exception("Campos obrigatório não foram preenchidos!");
     }
     return true;
 }
@@ -20,11 +20,6 @@ $usuario = [
     'idade' => 57,
 ];
 
-$usuarioValido = validarUsuario($usuario);
-
-if (!$usuarioValido) {
-    echo "Usuário Inválido!";
-    return false;
-}
+validarUsuario($usuario);
 
 echo "\n ... executando ...\n";
