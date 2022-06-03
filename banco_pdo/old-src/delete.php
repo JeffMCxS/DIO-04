@@ -13,9 +13,4 @@ $prepare->execute();
 echo $prepare->rowCount();
 
 
-
-
-
-
-
 //localhost/delete.php?id=1
